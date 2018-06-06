@@ -8,8 +8,7 @@ const settings = {
   },
   postDiscountData: {
     url: '/userinfo/discount/',
-    method: 'post',
-    headers: { 'Content-Type': 'application/json' },
+    method: 'post'
   }
 }
 

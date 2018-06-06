@@ -1,3 +1,9 @@
+/*
+ * @Author: 姬兵兵 
+ * @Date: 2018-06-06 10:41:56 
+ * @Last Modified by:   姬兵兵 
+ * @Last Modified time: 2018-06-06 10:41:56 
+ */
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 
@@ -6,16 +12,11 @@ import Vant from 'vant';
 import 'vant/lib/vant-css/index.css';
 
 Vue.use(Vant);
-
-// import Vue from 'vue'
-// import MintUI from 'mint-ui'
-// import 'mint-ui/lib/style.css'
 import App from './App'
 import router from './router'
 
 Vue.config.productionTip = false
-// Vue.use(MintUI)
-/* eslint-disable no-new */
+
 new Vue({
   el: '#app',
   router,

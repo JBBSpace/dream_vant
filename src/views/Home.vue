@@ -59,9 +59,8 @@ export default {
         discount: this.formData.discount,
         type: this.formData.type
       }
-      console.log(data);
       homeAPI.postDiscountData({ data: { ...data } }).then(res => {
-        if(res.data.status){
+        if(res.data.status != 0){
           Toast(res.data.message);
         }else{
           const {barcode} = res.data.data;

@@ -1,7 +1,7 @@
 
 export default {
   // 全局路径
-  apiServer: 'http://192.168.1.193:9000',
+  apiServer: 'http://192.168.1.121:9000',
   imageServer: '/',
   // 本地存储
   setStorage (name, content) {
