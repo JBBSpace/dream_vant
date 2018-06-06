@@ -1,0 +1,65 @@
+// Variables
+// 该文件只为统一网站风格与bootstrap/element-ui主题保持一致,变量用于在页面style中全局使用,改变变量值,并不代表改变了bootstrap/element-ui主题,想同步自定义主题到项目中element-ui,需使用命令行主题工具(http://element-cn.eleme.io/#/zh-CN/component/custom-theme),项目package未引入element-theme-chalk,需要按照官方说明生成后将主题拷贝替换当前项目主题文件(element-ui按需引入,theme在node_modules中),如果将该文件引入main.js编译时间明显延长,且查看页面源码,统一选择器会重复多次作用于元素,目前没有好办法同步修改,考虑到目前没有换肤需求,只为统一风格使用变量,更多变量详细可参考根目录element_variables.scss
+/* element ui */
+
+// $--color-primary: #409EFF;
+/* 改变 icon 字体路径变量，必需 */
+
+/* $--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index"; */
+
+/* bootstrap */
+
+$white : #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black : #000 !default;
+$blue : #007bff !default;
+$indigo : #6610f2 !default;
+$purple : #6f42c1 !default;
+$pink : #e83e8c !default;
+$red : #dc3545 !default;
+$orange : #fd7e14 !default;
+$yellow : #ffc107 !default;
+$green : #28a745 !default;
+$teal : #20c997 !default;
+$cyan : #17a2b8 !default;
+$primary : $blue !default;
+$secondary : $gray-600 !default;
+$success : $green !default;
+$info : $cyan !default;
+$warning : $yellow !default;
+$danger : $red !default;
+$light : $gray-100 !default;
+$dark : $gray-800 !default;
+// Define common padding and border radius sizes and more.
+$border-width : 1px !default;
+$border-color : $gray-300 !default;
+$border-radius : .25rem !default;
+$border-radius-lg : .3rem !default;
+$border-radius-sm : .2rem !default;
+$box-shadow-sm : 0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow : 0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow-lg : 0 1rem 3rem rgba($black, .175) !default;
+$font-size-base : 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg : ($font-size-base * 1.25) !default;
+$font-size-sm : ($font-size-base * .875) !default;
+$font-weight-light : 300 !default;
+$font-weight-normal : 400 !default;
+$font-weight-bold : 700 !default;
+// Z-index master list
+$zindex-dropdown : 1000 !default;
+$zindex-sticky : 1020 !default;
+$zindex-fixed : 1030 !default;
+$zindex-modal-backdrop : 1040 !default;
+$zindex-modal : 1050 !default;
+$zindex-popover : 1060 !default;
+$zindex-tooltip : 1070 !default;

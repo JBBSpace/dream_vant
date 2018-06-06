@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/* @import "./bootstrap4/functions";
+@import "./bootstrap4/variables";
+// @import "./bootstrap4/mixins";
+@import "./bootstrap4/mixins/breakpoints";
+@import "./bootstrap4/mixins/hover";
+@import "./bootstrap4/mixins/screen-reader";
+@import "./bootstrap4/mixins/text-emphasis";
+@import "./bootstrap4/mixins/text-hide";
+@import "./bootstrap4/mixins/text-truncate";
+@import "./bootstrap4/mixins/visibility";
+@import "./bootstrap4/mixins/float";
+@import "./bootstrap4/mixins/background-variant";
+@import "./bootstrap4/mixins/clearfix";
+
+@import "./bootstrap4/root";
+@import "./bootstrap4/reboot";
+// @import "./bootstrap4/type";
+// @import "./bootstrap4/images";
+// @import "./bootstrap4/code";
+// @import "./bootstrap4/grid";
+// @import "./bootstrap4/tables";
+// @import "./bootstrap4/forms";
+// @import "./bootstrap4/input-group";
+// @import "./bootstrap4/custom-forms";
+@import "./bootstrap4/utilities"; */
+
+html,
+body {
+    height: 100%;
+}
+
+html{
+    font-size: 16px;
+}
+
+/* body{
+    font: 12px/1.5 "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    outline: none !important;
+    margin: 0;
+} */
