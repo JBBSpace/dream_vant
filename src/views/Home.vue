@@ -83,7 +83,7 @@ export default {
   color: #06bf04;
 }
 .van-field .van-cell__title{
-  max-width:140px;
+  max-width:375px;
 }
 .checkbox_group {
   padding: 5px 12px;

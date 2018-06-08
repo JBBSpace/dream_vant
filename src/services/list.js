@@ -6,8 +6,8 @@ const settings = {
     url: '/userinfo/approvelist/',
     method: 'get'
   },
-  postDiscountData: {
-    url: '/userinfo/discount/',
+  isOk: {
+    url: '/userinfo/approve/',
     method: 'post'
   }
 }
