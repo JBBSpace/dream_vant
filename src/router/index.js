@@ -1,11 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/views/Home'
-import Qurt from '@/views/qurt'
-import Echart from '@/views/echart'
-import Table from '@/views/table'
-import List from '@/views/list'
-
 Vue.use(Router)
 
 export default new Router({
@@ -13,27 +7,12 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
-    },
-    {
-      path: '/qurt/:qrcode',
-      name: 'qurt',
-      component: Qurt
-    },
-    {
-      path: '/echart',
-      name: 'echart',
-      component: Echart
-    },
-    {
-      path: '/table',
-      name: 'table',
-      component: Table
+      component: resolve => require(['@/views/Home'], resolve)
     },
     {
       path: '/list',
       name: 'list',
-      component: List
+      component: resolve => require(['@/views/list'], resolve)
     }
   ]
 })

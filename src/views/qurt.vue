@@ -11,7 +11,7 @@ Vue.use(QRCode);
 export default {
   data () {
     return {
-      url: this.$route.params.qrcode
+      url: window.location.search.split("=")[1]?location.search.split("=")[1]:""
     }
   },
   methods: {
@@ -36,7 +36,7 @@ export default {
   flex-direction: column;
 }
 #canvas {
-  width: 200px !important;
-  height: 200px !important;
+  width: 350px !important;
+  height: 350px !important;
 }
 </style>

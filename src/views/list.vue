@@ -11,8 +11,8 @@
               <van-collapse-item v-for="item in waitList" :name="item.id" :key="item.id">
                 <div slot="title">
                   <span>{{item.appdate}} {{item.c_selldeptname}}</span> 
-                  <van-button type="primary" size="mini" @click.stop="isOk(item.id,true)">签批</van-button>
-                  <van-button type="danger" size="mini" @click.stop="isOk(item.id,false)">拒绝</van-button>
+                  <van-button size="mini" @click.stop="isOk(item.id,true)">签批</van-button>
+                  <van-button size="mini" @click.stop="isOk(item.id,false)">拒绝</van-button>
                 </div>
                 {{item.c_comment}}
               </van-collapse-item>
@@ -54,13 +54,29 @@
 </template>  
   
 <script>
+import util from '@/helper/util';
 import listAPI from "@/services/list";
 export default {
   data() {
     return {
       tab: 0,
       activeNames: [],
-      waitList: [],
+      waitList: [{
+        id:1,
+        appdate:'2018-08-9',
+        c_selldeptname: '恒宝莱眼镜1号店',
+        c_comment: '恒宝莱眼镜1号店恒宝莱眼镜1号店恒宝莱眼镜1号店恒宝莱眼镜1号店恒宝莱眼镜1号店'
+      },{
+        id:2,
+        appdate:'2018-08-9',
+        c_selldeptname: '恒宝莱眼镜1号店',
+        c_comment: '恒宝莱眼镜1号店恒宝莱眼镜1号店恒宝莱眼镜1号店恒宝莱眼镜1号店恒宝莱眼镜1号店'
+      },{
+        id:3,
+        appdate:'2018-08-9',
+        c_selldeptname: '恒宝莱眼镜1号店',
+        c_comment: '恒宝莱眼镜1号店恒宝莱眼镜1号店恒宝莱眼镜1号店恒宝莱眼镜1号店恒宝莱眼镜1号店'
+      }],
       signedList: [],
       waitLoading: false,
       signedLoading: false,
@@ -72,11 +88,11 @@ export default {
   methods: {
     // 加载更多
     loadMore(t) {
-      const params = { ConferID: "U00225" };
+      const code = this.$route.query.code?this.$route.query.code:'';
+      const params = { ConferID: util.getCookie('userid'), code: code };
       !this.tab
         ? (params.count = this.waitList.length + 1)
         : (params.count = this.signedList.length + 1);
-
       listAPI.getList({ params: { ...params } }).then(
         res => {
           const { waitSign, Signed } = res.data.data;
@@ -166,7 +182,7 @@ export default {
 }
 .van-collapse-item__content {
   color: #ccc;
-  font-size: 12px;
+  font-size: 28px;
 }
 .no_data {
   height: calc(100vh - 100px);
